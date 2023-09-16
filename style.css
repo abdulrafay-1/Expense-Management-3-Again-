@@ -1,0 +1,16 @@
+body {
+    background-color: #e4e4e4 !important;
+}
+
+main {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+button {
+    background-color: #6c63ff !important;
+
+}
+
+input:checked {
+    background-color: #6c63ff !important;
+}

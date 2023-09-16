@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    background-color: #e4e4e4 !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    box-shadow: rgba(100, 100, 111, 0.2) 4px 4px 10px 0px;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.card-container {
+    gap: 12px;
+}
+
+*::selection {
+    background-color: black;
+    color: white;
+}
