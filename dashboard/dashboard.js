@@ -30,9 +30,7 @@ function addTodoItem() {
     var priority = document.getElementById("inputPriority").value;
     var todoId = Date.now();
 
-    var filterUserTodoItems = todoItemsArray.filter(function (item) {
-        return item.userId == userId
-    });
+
 
     var todoItem = {
         userId,
@@ -54,7 +52,9 @@ function addTodoItem() {
             icon: 'success', title: 'Item Added'
         })
 
-
+        filterUserTodoItems = todoItemsArray.filter(function (item) {
+            return item.userId == userId
+        });
 
         clearInputs();
         clearHTMLtable();
@@ -79,7 +79,7 @@ function addTodoItem() {
 
 function displayUserTodos() {
     var table = document.getElementById("tableitems");
-    if (filterUserTodoItems.length > 0) {
+    if (filterUserTodoItems) {
         for (var i = 0; i < filterUserTodoItems.length; i++) {
             var tableRow = table.appendChild(document.createElement('tr'))
 
@@ -97,7 +97,9 @@ function displayUserTodos() {
         }
     }
 }
-displayUserTodos();
+if (filterUserTodoItems.length > 0) {
+    displayUserTodos();
+}
 
 function clearInputs() {
     document.getElementById("inputTitle4").value = "";
